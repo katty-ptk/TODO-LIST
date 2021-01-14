@@ -1,5 +1,4 @@
 * {
-    justify-content: space-around;
     margin: 0;
     padding: 0;
   }
@@ -7,6 +6,7 @@
 body {
     background-image: linear-gradient(to right, #2e2c2cb7 20%, #181414 80%);
     color: #ffffff;
+    overflow: hidden;
 }
 
 /* form */
@@ -37,13 +37,39 @@ form input[type="text"] {
 form button[type="submit"] {
     position: absolute;
     top: 100px;
-    left: 25%;
+    left: 32%;
     height: 3.5em;
+}
+
+/* show-hide buttons */
+.show_hide {
+    position: relative;
+    top: 600px;
+    left: 500px;
+    font: 1.2em bold;
+}
+
+.show_hide button {
+    height: 2.5em;
+    width: 15em;
+    background-color: grey;
+    color: #ffffff;
+    border-radius: 25px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.show_hide button:hover {
+    background: rgb(99, 97, 97);
+}
+
+.show_hide #show-completed {
+    position: absolute;
+    left: 350px;
 }
 
 /* container */
 .container {
-    /* visibility: hidden; */
+    visibility: hidden;
     position: relative;
     top: 470px;    
 
