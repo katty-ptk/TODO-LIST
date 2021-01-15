@@ -5,44 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- style -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>To do today</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+
+    <title>My todo list 💞></title>
 </head>
 <body>
     
-    <!-- add todo -->
-    <div class="adding_task_div">
-        <form>
-            <label for="input_todo">Enter your task!</label> <br>
-            <div class="input_task" style="display: inline">
-                <div><input id="input_todo" type="text"></div>
-                <div><button type="submit" class="btn btn-secondary">Add task</button></div>    
-            </div>
-        </form>
-    </div>
-
-
-    <!-- show/hide buttons -->
-    <div class="show_hide">
-        <button id="show-tasks">What do I have to do? 🤨</button>
-        <button id="show-completed">What have I completed? 😇</button>
-    </div>
-
-    <div class="container">
-        <!-- to do -->
-        <div class="tasks">
-            <h1>📄</h1>
-            <!-- needs to be edited with css -->
-        </div>
-
-        <!-- completed -->
-        <div class="completed">
-            <h1>✔️</h1>
-            <!-- needs to be edited with css -->
-        </div>
-    </div>
+    <section>
+        <div class="input_div">
+            <form>
+                <label for="input_task">Enter your task:</label> <br>
+                <input id="input_task" type="text">
+            </form>
+        </div>    
+    </section>
 
 </body>
 </html>

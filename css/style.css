@@ -1,104 +1,43 @@
 * {
     margin: 0;
     padding: 0;
-  }
-
-body {
-    background-image: linear-gradient(to right, #2e2c2cb7 20%, #181414 80%);
-    color: #ffffff;
-    overflow: hidden;
 }
 
-/* form */
-.adding_task_div {
-    position: absolute;
-    top: 20%;
-    left: 40%;
-}
-
-form {
-    font: 2em bold;
-}
-
-form label {
+section {
     position: relative;
-    left: 30px;
+    height: 100vh;
+    background: #1c2431;
 }
 
-form input[type="text"] {
-    position: relative;
-    top: 10px;
-    height: 1em;
-    width: 8.5em;
-    padding: 0.5em;
-    border-radius: 25px;
-}
-
-form button[type="submit"] {
-    position: absolute;
-    top: 100px;
-    left: 32%;
-    height: 3.5em;
-}
-
-/* show-hide buttons */
-.show_hide {
-    position: relative;
-    top: 600px;
-    left: 500px;
-    font: 1.2em bold;
-}
-
-.show_hide button {
-    height: 2.5em;
-    width: 15em;
-    background-color: grey;
-    color: #ffffff;
-    border-radius: 25px;
-    transition: background-color 0.5s ease-in-out;
-}
-
-.show_hide button:hover {
-    background: rgb(99, 97, 97);
-}
-
-.show_hide #show-completed {
-    position: absolute;
-    left: 350px;
-}
-
-/* container */
-.container {
-    visibility: hidden;
-    position: relative;
-    top: 470px;    
-
-    width: 1500px;
-    height: 500px;
-}
-
-.container .tasks, .container .completed {
-    width: 500px;
-    height: 500px;
+/* input_div */
+.input_div {
+    /* border: 0.5em solid black; */
     
-    position: absolute;
-    background-color: #42424200;
-    background-image: radial-gradient(at top center, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.03) 100%), linear-gradient(to top, rgba(255,255,255,0.1) 0%, rgba(143,152,157,0.60) 100%);
-    background-blend-mode: normal, multiply;    
+    width: 450px;
+    height: 100px;
     
-    opacity: 1;
-    
-    border-radius: 25px;
-
-}
-
-.container .completed {
-    position: absolute;
-    right: 100px;
-}
-
-.container .tasks h1, .container .completed h1 {
-    position: relative;
-    top: 10px;
     text-align: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.input_div form {
+    color: #ffffff;
+    font: 2em bold;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.input_div input[type="text"] {
+    width: 230px;
+    height: 25px;
+    border-radius: 25px;   
+    padding: 5px;
+    font: 1em bold;
 }
