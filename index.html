@@ -8,19 +8,26 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- favicon -->
-    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <link rel="icon" type="image/png" href="images/favicon.png"/>
 
-    <title>My todo list 💞></title>
+    <title>My todo list 💞</title>
 </head>
 <body>
     
     <section>
-        <div class="input_div">
+        <div class="container">
             <form>
-                <label for="input_task">Enter your task:</label> <br>
-                <input id="input_task" type="text">
-            </form>
-        </div>    
+                <div class="input-submit">
+                    <input id="task-input" type="text" placeholder="Enter your task here.">
+                    <button type="submit" id="submit-btn">⫸</button>        
+                </div>
+                </form>
+
+                <div class="todos">
+                    <h2>Todos!</h2>
+                    <!-- the added tasks will be added here -->
+                </div>
+        </div>
     </section>
 
 </body>

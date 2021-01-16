@@ -3,41 +3,92 @@
     padding: 0;
 }
 
+body {
+    background: #1c2431;
+    overflow: hidden;
+    color: #e9e3e3;
+}
+
 section {
     position: relative;
     height: 100vh;
-    background: #1c2431;
 }
 
-/* input_div */
-.input_div {
-    /* border: 0.5em solid black; */
-    
-    width: 450px;
-    height: 100px;
-    
-    text-align: center;
-
+/* container */
+.container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    height: 600px;
+    width: 400px;
+    border: 0.5em solid black;
+    border-radius: 25px;
+
 }
 
-.input_div form {
-    color: #ffffff;
-    font: 2em bold;
+.container form .input-submit {
+    display: inline;
+}
 
+.container form input[type="text"] {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+    top: 80px;
+    left: 18%;
 
-.input_div input[type="text"] {
-    width: 230px;
-    height: 25px;
-    border-radius: 25px;   
-    padding: 5px;
+    padding: 1em;
+    border-radius: 25px;
+
+    
+    font-family: 'Courier New', Courier, monospace;
     font: 1em bold;
+
+    width: 170px;
+    height: 15px;
+}
+
+.container form #submit-btn {
+    position: relative;
+    top: 87px;
+    left: 72%;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+
+    margin: 0 auto;
+    padding: 0;
+    display: table-cell;
+    vertical-align: middle;
+
+    background: transparent;
+    color: #e9e3e3;
+    
+    font: 2em bold;
+    transition: all 0.5s ease-in-out;
+}
+
+.container form #submit-btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+}
+
+/* todos */
+.todos {
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    width: 300px;
+    height: 380px;
+
+    border: 0.2em solid grey;
+    border-radius: 18px;
+}
+
+.todos h2 {
+    position: relative;
+    text-align: center;
+    top: 10px;
 }
