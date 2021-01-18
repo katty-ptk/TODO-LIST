@@ -92,37 +92,34 @@ section {
     top: 10px;
 }
 
-/* tasks div */
-.tasks-div {
-    position: absolute;
-    top: 50px;
-    left: 7%;
-    width: 250px;
-    height: 300px;
-
-    border: 5px solid black;
-    border-radius: 15px;
+/* added tasks */
+.task-div {
+    position: relative;
+    top: 20px;
+    left: 20px;
 }
 
-.tasks-div #divs .task-p {
+.task-div .task-p {
+    display: inline;
     position: absolute;
-    top: 15px;
-    left: 15px;
+    margin-right: 10px;
 
-    font: 1.5em bold;
+    font: 2em bold;
 }
 
-.tasks-div .complete-btn {
-    width: 2.5em;
-    height: 2.5em;
+.task-div .complete-button {
+    width: 2em;
+    height: 2em;
     background: transparent;
-    border-radius: 10px;
-    
+
+    float: right;
+    margin-right: 30%;
+    margin-top: 5px;
+
     transition: all 0.5s ease-in-out;
 }
 
-.tasks-div .complete-btn:hover {
-    width: 40px;
-    height: 40px;
-
+.task-div .complete-button:hover {
+    width: 2.5em;
+    height: 2.5em;
 }
