@@ -3,7 +3,9 @@ $("#submit-btn").click(function ( event ) {
      event.preventDefault();
 
     if ( !$("#task-input").val() ) {
-      alert("please enter a task!")
+        
+        alert("please enter a task!")
+
     } else {
 
         // add task 
@@ -12,14 +14,23 @@ $("#submit-btn").click(function ( event ) {
         task_p.textContent = task;
         task_p.setAttribute("class", "task-p")
 
-        // create div which will hold the task and its complete button
+        // create the div which will hold the task and its button
         var task_div = document.createElement('div');
-        task_div.setAttribute("id", "task-div");
-        document.getElementById("task-div").appendChild(task_p);
+        task_div.appendChild(task_p); 
+
+        // create button to check task as completed
+        var complete_button = document.createElement("button");
+        complete_button.innerHTML = "✔️";
+
+        task_div.appendChild(complete_button);
         document.getElementById("divs").appendChild(task_div);
 
-        // document.getElementById("divs").appendChild(task_p);            
-    
+        // setting attributes to style with css
+        task_div.setAttribute("class", "task-div");
+        task_p.setAttribute("class", "task-p");
+        complete_button.setAttribute("class", "complete-button");
+
         $("#task-input").val("");
+   
     }      
 });
