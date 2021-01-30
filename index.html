@@ -13,25 +13,22 @@
     <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <title>My todo list 💞</title>
+    <title>My todo list</title>
 </head>
 <body>
-    
-    <section>
-        <div class="container">
-            <form>
-                <div class="input-submit">
-                    <input id="task-input" type="text" placeholder="Enter your task here.">
-                    <button type="submit" id="submit-btn">⫸</button>        
-                </div>
-                </form>
 
-                <div class="todos">
-                    <h2>Todos!</h2>
-                    <div id="divs"></div>
-                </div>
+    <div class="bg-image"></div>
+
+    <header>
+            <div class="title">
+                <h1 id="header">My todo list:)</h1>
+            </div>
+            <div class="show-hide-completed">
+                <button id="show-hide-completed" type="submit">Show completed tasks</button>    
         </div>
-    </section>
+
+        <span></span> <!-- the line -->
+    </header>
 
     <script src="js/app.js"></script>
 </body>
