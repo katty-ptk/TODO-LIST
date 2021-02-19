@@ -1,0 +1,16 @@
+html & css:
+  > se va folosi si Font Awesome / Bootstrap :)
+  > header 
+      -- "my todo list" devine data zilei de respective
+      -- butonul "show completed tasks" se muta din header in container'ul listei
+
+  > container
+      -- in coltul din dreapta sus va fi adaugat un buton de "clear", care va sterge toate task-urile adaugate
+      -- butonul "show completed" va fi micsorat si adaugat in coltul din dreapta / stanga jos al containerului
+      -- butoanele de "complete" si "trash" vor fi de fapt iconite pe post de butoanele
+js:  
+  > added tasks
+      -- se va lucra cu objects ==> fiecare task va fi un object
+      -- lista va fi un array de objects
+      -- fiecare task va avea in stanga un buton de "complete" si unul de "trash"
+      

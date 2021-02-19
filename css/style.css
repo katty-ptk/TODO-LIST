@@ -1,4 +1,8 @@
-/* BACKGROUND */
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body, html {
     height: 100%;
     overflow: hidden;
@@ -30,38 +34,19 @@ header {
 header .title {
     position: absolute;
     float: left;
-    width: 200px;
-    height: 60px;
-    /* top: 3px; */
-    left: 30px;
-    bottom: 17px;
+    width: 500px;
+    left: 25px;
 }
 
-header .title h1 {
+header .affirmation {
     position: absolute;
-    top: 30px;
+    align-items: center;
+    text-align: center;
+    left: 40%;
 }
 
-header .show-hide-completed {
-    position: relative;
-    float: right;
-}
-
-/* show/hide completed tasks button */
-header .show-hide-completed button[type="submit"] {
-    position: relative;
-    top: 13px;
-    background: transparent;
-    border-radius: 15px;
-    opacity: 0.6;
-    font: 30px bold;
-    transition: all 0.5s ease-in-out;
-}
-
-header .show-hide-completed button[type="submit"]:hover {
-    opacity: 1;
-    font: 40px bold;
-    box-shadow: 2px 2px;
+header .title, header .affirmation {
+    top: 15px;
 }
 
 header span {
@@ -71,4 +56,81 @@ header span {
     width: 100%;
     background: rgb(200, 201, 199);
     height: 5px;
+}
+
+/* CONTAINER */
+.container {
+    height: 700px;
+    width: 450px;
+    border: 0.45em solid rgb(110, 110, 110);
+    border-radius: 18px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container .clear {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    
+}
+
+/* form */
+.container form {
+    position: absolute;
+    top: 50px;
+    left: 25%;
+}
+
+.container form label {
+    position: relative;
+    left: 20px;
+    font: 1.5em bold;
+    color: #ffffff;
+}
+
+.container form input{
+    display: block;
+    position: absolute;
+    margin-top: 10px;
+    border-radius: 20px;
+
+    height: 25px;
+    width: 200px;
+    padding: 2px 15px;
+    font: bold;
+    font-family: cursive;
+    font-size: medium;
+}
+
+/* added-taks */
+.container .tasks-container {
+    height: 550px;
+    width: 300px;
+    position: absolute;
+    bottom: 10px;
+    left: 70px;
+}
+
+.container .tasks-container ul {
+    top: 10px;
+    font: 2em bold;
+    color: #ffffff;
+    /* text-decoration: no//ne; */
+}
+
+.container .tasks-container ul li {
+    margin: 20px;
+    list-style-type: none;
+    text-align: center;
+}
+
+/* show completed */
+.container .show-completed {
+    position: absolute;
+    left: 15px;
+    top: 15px;
 }
