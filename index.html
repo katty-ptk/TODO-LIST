@@ -17,18 +17,18 @@
 
     <title>My todo list</title>
 </head>
-<body>
+<body onload="changeAffirmation()">
 
     <div class="bg-image"></div> <!-- to position the background image-->
 
     <!-- HEADER -->
     <header>
             <div class="title">
-                <h1 id="header">Friday, Feb 19th</h1>
+                <h1 id="date">IAn 2121</h1>
             </div>
 
-            <div class="affirmation">
-                <h1>💛 You are awesome! 💛</h1>
+            <div id="affirmation">
+                <!-- <h1>💛 You are awesome! 💛</h1> -->
             </div>
 
         <span></span> <!-- the line -->
@@ -37,13 +37,13 @@
     <!-- ADD TASKS DIV -->
     <div class="container">
         <div class="clear">
-            <i class="icon-refresh fas fa-camera fa-5x" style="font-size: 35px; color: #ffffff;"></i>
+            <i class="icon-refresh fas fa-camera fa-5x" title="clear" style="font-size: 35px; color: #ffffff;"></i>
         </div>
 
         <form>
 
-            <label for="add-task">Enter your task below: </label>
-            <input type="text" id="add-taks">
+            <!-- <label for="add-task">Enter your task below: </label> -->
+            <input type="text" id="add-taks" placeholder="Add your task here." autocomplete="off">
 
     
         </form>
@@ -59,7 +59,7 @@
         </div>
 
         <div class="show-completed">
-            <i class="fa fa-check-cirlce fas fa-camera fa-5x" style="font-size: 40px; color: #ffffff;"></i>
+            <i class="icon-ok" title="show completed tasks" style="font-size: 60px; color: #ffffff;"></i>
         </div>
 
 
