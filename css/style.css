@@ -32,18 +32,19 @@ header {
     display: inline;
 }
 
-header .title {
+header .date h1 {
     position: absolute;
     float: left;
     width: 500px;
     left: 25px;
+    font-size: 25px;
 }
 
 header #affirmation {
     position: absolute;
     left: 47%;
     /* font-family: cursive; */
-    color: rgb(227, 247, 54);
+    /* color: rgb(227, 247, 54); */
 }
 
 header span {
@@ -116,15 +117,42 @@ header span {
     /* border: 1px solid black; */
 }
 
-.container .tasks-container ul {
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    /*box-shadow: inset 0 0 5px grey; */
+    border-radius: 30px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(167, 165, 165); 
+    border-radius: 30px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(136, 132, 132); 
+  }
+
+.container .tasks-container #todos-list {
     top: 10px;
     font: 2em bold;
     color: #ffffff;
     /* text-decoration: no//ne; */
 }
 
-.container .tasks-container ul li {
-    margin: 20px;
+.container .tasks-container #todos-list .item {
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+    margin-bottom: 30px;
+    margin-right: 20px;
     list-style-type: none;
     text-align: center;
 }
