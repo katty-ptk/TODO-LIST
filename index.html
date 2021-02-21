@@ -6,7 +6,7 @@
 
     <!-- style -->
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">    <link rel="stylesheet" href="css/style.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
     <!-- favicon -->
@@ -23,13 +23,11 @@
 
     <!-- HEADER -->
     <header>
-            <div class="title">
-                <h1 id="date">IAn 2121</h1>
+            <div class="date">
+                <h1 id="date-h1"></h1>
             </div>
 
-            <div id="affirmation">
-                <!-- <h1>💛 You are awesome! 💛</h1> -->
-            </div>
+            <div id="affirmation"></div>
 
         <span></span> <!-- the line -->
     </header>
@@ -40,21 +38,13 @@
             <i class="icon-refresh fas fa-camera fa-5x" title="clear" style="font-size: 35px; color: #ffffff;"></i>
         </div>
 
-        <form>
-
-            <!-- <label for="add-task">Enter your task below: </label> -->
-            <input type="text" id="add-taks" placeholder="Add your task here." autocomplete="off">
-
-    
+        <form id="input-form">
+            <input type="text" id="add-tasks" placeholder="Add your task here." autocomplete="off">    
         </form>
 
         <div class="tasks-container">
             
-            <ul id="list">
-                <li>drink coffee</li>
-                <li>work</li>
-                <li>exercise</li>
-            </ul>
+            <ul id="todos-list"></ul>
 
         </div>
 
