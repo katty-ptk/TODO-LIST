@@ -39,7 +39,7 @@ let LIST = [], id = 0;
 const CHECK = "checked";
 const UNCHECK = "unchecked";
 
-addToDo = ( toDo, id, done, trash ) => { // ( toDo ) is the input value
+addToDo = ( toDo, toDoObj, id, done, trash ) => { // ( toDo ) is the input value
     
     const DONE = done ? CHECK : UNCHECK;
     
@@ -49,7 +49,7 @@ addToDo = ( toDo, id, done, trash ) => { // ( toDo ) is the input value
                  <i class="icon-ok-sign" id="${id}" style="font-size: 35px; color: #ffffff; margin-left: 5px;"></i>
             </span>
             <p class="todo-text lineThrough" style="margin: 0 50px;";>${toDo}</p> 
-            <span onclick="deleteTask()">
+            <span>
                  <i class="icon-eraser" id="${id}" style="font-size: 35px; color: #ffffff;"></i>    
             </span>    
         </li>
@@ -64,37 +64,24 @@ document.querySelector("#input-form").addEventListener("submit", function ( even
     const toDo = input.value; // toDo takes input's value
 
     if ( toDo ) {   // if input isn't empty
-        addToDo( toDo, id, false, false );   // add item to the list
 
-        LIST.push({
+        const toDoObj = {
             name: toDo,
             id: id,
             done: false,
             trash: false
-        });
+        };
+
+        addToDo( toDo, toDoObj, id, false, false );   // add item to the list
+
+
+        LIST.push(toDoObj);
+
         id ++;
-        // console.log(LIST);
+        console.log(LIST);
     }
-        else   // if input is emty
+        else   // if input is empty
             alert('please enter a task!')  //  alert user
 
     input.value = "";
 });
-
-// // complete task
-// completeTask = ( toDo ) => {
-//     for (var i = 0; i <= LIST.length; i++ ){
-//         if ( i == this.id ) {
-//             console.log('ies');
-//         }
-//     }
-// }
-
-// // detele task
-// deleteTask = ( toDo ) => {
-//     console.log('deleteTask is working');
-// }
-
-// clear = () => {
-//     console.log('clear');
-// }
