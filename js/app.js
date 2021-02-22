@@ -29,39 +29,72 @@ function changeAffirmation() {
 }   
 
 
-// classes names
+// adding the to-do 
+const todos_list = document.querySelector("#todos-list"); // where the items will be put
+const input = document.querySelector("#add-tasks"); // grabs the input field
+
+let LIST = [], id = 0;
+
+// classes
 const CHECK = "checked";
 const UNCHECK = "unchecked";
 
-
-// adding the to-do 
-const todos_list = document.querySelector("#todos-list");
-const input = document.querySelector("#add-tasks");
-
-addToDo = ( toDo, id, done ) => {
-
+addToDo = ( toDo, id, done, trash ) => { // ( toDo ) is the input value
+    
+    const DONE = done ? CHECK : UNCHECK;
+    
     const item = `
-        <li class="item">
-            <i class="icon-circle-blank" job="complete" id="0" style="font-size: 35px; color: #ffffff; margin-left: 5px;"></i>
-            <p class="todo-text" style="margin: 0 50px;";>${toDo}</p> 
-            <i class="icon-eraser" job="delete" id="0" style="font-size: 35px; color: #ffffff;"></i>        
+        <li class="item unchecked">
+            <span id="complete-span" onclick="completeTask()">
+                 <i class="icon-ok-sign" id="${id}" style="font-size: 35px; color: #ffffff; margin-left: 5px;"></i>
+            </span>
+            <p class="todo-text lineThrough" style="margin: 0 50px;";>${toDo}</p> 
+            <span onclick="deleteTask()">
+                 <i class="icon-eraser" id="${id}" style="font-size: 35px; color: #ffffff;"></i>    
+            </span>    
         </li>
-`; // #{toDo} takes the added task's value and passes it there
+    `; // #{toDo} takes the added task's value and passes it there
+       // the icons will be replaced
     todos_list.insertAdjacentHTML("beforeend", item); 
 }
 
-document.querySelector("#input-form").addEventListener("submit", function ( event ) {
+document.querySelector("#input-form").addEventListener("submit", function ( event ) {   // when 'enter' is pressed
     event.preventDefault();
 
-    const toDo = input.value;
+    const toDo = input.value; // toDo takes input's value
 
-    if ( toDo ) 
-        addToDo( toDo );
-    else
-        alert('introdu un task')
+    if ( toDo ) {   // if input isn't empty
+        addToDo( toDo, id, false, false );   // add item to the list
+
+        LIST.push({
+            name: toDo,
+            id: id,
+            done: false,
+            trash: false
+        });
+        id ++;
+        // console.log(LIST);
+    }
+        else   // if input is emty
+            alert('please enter a task!')  //  alert user
 
     input.value = "";
 });
 
-// addToDo("drink coffee", 1, false, false);
-// console.log(todos_list);
+// // complete task
+// completeTask = ( toDo ) => {
+//     for (var i = 0; i <= LIST.length; i++ ){
+//         if ( i == this.id ) {
+//             console.log('ies');
+//         }
+//     }
+// }
+
+// // detele task
+// deleteTask = ( toDo ) => {
+//     console.log('deleteTask is working');
+// }
+
+// clear = () => {
+//     console.log('clear');
+// }

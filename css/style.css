@@ -43,8 +43,7 @@ header .date h1 {
 header #affirmation {
     position: absolute;
     left: 47%;
-    /* font-family: cursive; */
-    /* color: rgb(227, 247, 54); */
+    color: rgb(233, 212, 212);
 }
 
 header span {
@@ -111,7 +110,7 @@ header span {
     height: 490px;
     width: 350px;
     position: absolute;
-    bottom: 90px;
+    bottom: 80px;
     left: 70px;
     overflow-y: auto;
     /* border: 1px solid black; */
@@ -141,10 +140,8 @@ header span {
   }
 
 .container .tasks-container #todos-list {
-    top: 10px;
     font: 2em bold;
     color: #ffffff;
-    /* text-decoration: no//ne; */
 }
 
 .container .tasks-container #todos-list .item {
@@ -155,6 +152,7 @@ header span {
     margin-right: 20px;
     list-style-type: none;
     text-align: center;
+    bottom: 0;
 }
 
 /* show completed */
@@ -162,4 +160,8 @@ header span {
     position: absolute;
     right: 15px;
     bottom: 1px;
+}
+
+.checked {
+    display: none;
 }
